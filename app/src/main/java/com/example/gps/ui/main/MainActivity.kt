@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
     private fun startPostRequest() {
         mMainActivityViewModel?.findAll()?.observe(this, Observer {
             if (it.size >= 10) {
-                mMainActivityViewModel?.retroFitSendListToServer(it.takeLast(11))
+                mMainActivityViewModel?.retroFitSendListToServer(it.takeLast(10))
             }
         })
     }
